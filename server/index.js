@@ -46,7 +46,7 @@ app.post('/saveuser', (req, res) => {
 
 // ฟังก์ชันสำหรับบันทึกข้อมูลผู้ใช้ในฐานข้อมูล
 function saveUserData(userData) {
-  const { gender,name, location, email, login, picture ,dob} = userData;
+  const { gender, name, location, email, login, picture ,dob} = userData;
   const { title, first, last } = name;
   const { country } = location;
   const { username, password, md5, sha1, sha256, uuid } = login;

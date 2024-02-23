@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 
-const User = ({ name, location, email, picture, login ,dob}) => {
+const User = ({ gender, name, location, email, picture, login ,dob}) => {
     // Function to handle saving user data to the database
     const handleSave = () => {
-        const userData = { name, location, email, picture, login ,dob};
+        const userData = { gender, name, location, email, picture, login ,dob};
         // Assuming you have a function to save user data to the database
         saveUserData(userData);
     };
