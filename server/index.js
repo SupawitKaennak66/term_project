@@ -33,18 +33,22 @@ app.get('/', (req, res) => {
 });
 
 app.get('/users', (req, res) => {
-    axios.get('https://randomuser.me/api/?page=1&results=10')
-        .then(response => {
-            res.send(response.data);
-         });
+  axios.get('https://randomuser.me/api/?page=1&results=10')
+      .then(response => {
+          res.send(response.data);
+       })
+       .catch(error => {
+          console.error('Error fetching user data:', error);
+          res.status(500).send('Error fetching user data');
+       });
 });
+
 
 app.post('/saveuser', (req, res) => {
   const userData = req.body;
   if (!userData) {
     return res.status(400).send('Invalid user data');
   }
-
   console.log(userData);
   saveUserData(userData);
 });
