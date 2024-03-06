@@ -41,9 +41,14 @@ app.get('/users', (req, res) => {
 
 app.post('/saveuser', (req, res) => {
   const userData = req.body;
+  if (!userData) {
+    return res.status(400).send('Invalid user data');
+  }
+
   console.log(userData);
   saveUserData(userData);
 });
+
 
 // ฟังก์ชันสำหรับบันทึกข้อมูลผู้ใช้ในฐานข้อมูล
 function saveUserData(userData) {
