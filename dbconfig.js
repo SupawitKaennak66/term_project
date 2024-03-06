@@ -9,11 +9,11 @@ var dbconfig = {
     },
     production: {
         //connectionLimit : 10,
-        host: 'localhost',
-        port: '3306',
-        user: 'dbuser',
-        password: 'P@ssw0rd@2023',
-        database: 'moviedb'
+        host: "localhost",
+        port: "3306",
+        user: "dbuser66",
+        password: "P@ssw0rd",
+        database: "user66031_db",
     }
 };
 module.exports = dbconfig;
